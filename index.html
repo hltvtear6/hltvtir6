@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HLTV Tir 6 — рейтинг команд CS2</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0d11;--sf:#12161d;--sf2:#1a2029;--bd:#242c38;--tx:#eef2f7;--mu:#8b97a8;--ac:#348bdc;--up:#3ddc84;--dn:#ff5a5f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.w{max-width:1000px;margin:0 auto;padding:0 16px}
+header{background:var(--sf);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.nav{display:flex;align-items:center;gap:14px;height:58px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.logo img{width:34px;height:34px;border-radius:8px}
+.logo b{color:var(--ac)}
+nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+nav a{padding:8px 12px;border-radius:8px;color:var(--mu);font-weight:600;white-space:nowrap}
+nav a:hover,nav a.on{color:var(--tx);background:var(--sf2)}
+.tg{background:var(--ac);color:#fff;padding:8px 14px;border-radius:8px;font-weight:700;white-space:nowrap}
+.hero{padding:34px 0 10px}
+h1{font-size:30px;margin:0 0 6px;line-height:1.15}
+h1 span{color:var(--ac)}
+.sub{color:var(--mu);margin:0 0 18px}
+h2{font-size:18px;margin:26px 0 12px;text-transform:uppercase;letter-spacing:.8px;color:var(--mu)}
+.top3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.card.c1{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac) inset}
+.big{font-size:34px;font-weight:800;color:var(--ac)}
+.row{display:flex;align-items:center;gap:12px;background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:11px 14px;margin-bottom:8px;cursor:pointer}
+.row:hover{border-color:var(--ac);background:var(--sf2)}
+.pos{width:34px;font-weight:800;font-size:18px;color:var(--mu)}
+.nm{font-weight:700;flex:1;min-width:0}
+.pl{display:block;color:var(--mu);font-size:12px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pts{font-weight:700;width:60px;text-align:right}
+.ch{width:44px;text-align:right;font-weight:700}
+.up{color:var(--up)}.dn{color:var(--dn)}.eq{color:var(--mu)}
+.badge{display:inline-flex;width:38px;height:38px;border-radius:9px;background:var(--sf2);border:1px solid var(--bd);align-items:center;justify-content:center;font-weight:800;color:var(--ac);flex:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:14px 0}
+.st div{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:12px}
+.st small{color:var(--mu);display:block;font-size:12px;text-transform:uppercase}
+.st b{font-size:22px}
+.bar{height:8px;background:var(--sf2);border-radius:4px;overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;background:var(--ac)}
+input{width:100%;background:var(--sf);border:1px solid var(--bd);color:var(--tx);border-radius:10px;padding:12px 14px;font-size:15px;margin-bottom:12px}
+.note{background:var(--sf);border-left:3px solid var(--ac);padding:10px 14px;border-radius:6px;color:var(--mu);font-size:13px;margin-top:18px}
+.cta{background:linear-gradient(135deg,#1c4f86,#348bdc);border-radius:14px;padding:22px;margin:30px 0;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta a{background:#fff;color:#0b3d70;padding:11px 20px;border-radius:9px;font-weight:800}
+footer{border-top:1px solid var(--bd);color:var(--mu);padding:22px 0 30px;font-size:13px;margin-top:30px}
+.back{color:var(--ac);font-weight:600;display:inline-block;margin:18px 0 4px}
+@media(max-width:640px){.top3{grid-template-columns:1fr}.nav{flex-wrap:wrap;height:auto;padding:8px 0}nav{order:3;width:100%;margin:0}h1{font-size:25px}.tg{margin-left:auto}}
+.ar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}.ar input{margin:0;flex:1;min-width:80px;width:auto}
+textarea{width:100%;background:var(--sf2);border:1px solid var(--bd);color:var(--tx);border-radius:8px;padding:10px;font:inherit}
+button,.btn{background:var(--sf2);border:1px solid var(--bd);color:var(--tx);border-radius:8px;padding:8px 12px;font:inherit;font-weight:600;cursor:pointer;display:inline-block}
+button.p{background:var(--ac);border-color:var(--ac);color:#fff}button.x{color:var(--dn)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px;align-items:center}.tabs button.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.bi{width:38px;height:38px;object-fit:contain;border-radius:8px}.badge .bi{width:100%;height:100%;padding:3px;border-radius:0}.badge{overflow:hidden}.badge.bg{width:64px;height:64px;font-size:22px}
+.abar{padding:8px 0;background:#16324f;color:#cfe6ff;font-size:13px}.abar a{color:#fff;font-weight:700;text-decoration:underline}label small{color:var(--mu);display:block;margin-bottom:4px}
+</style></head><body>
+<header><div class="w nav">
+<a class="logo" href="#/"><img id="lg" src="" alt="logo"><span id="bn"></span></a>
+<nav id="nav"><a href="#/" data-r="">Рейтинг</a><a href="#/teams" data-r="teams">Команды</a><a href="#/players" data-r="players">Игроки</a><a href="#/about" data-r="about">О рейтинге</a></nav>
+<a class="tg" id="tgb" href="https://t.me/hltvtir6" target="_blank" rel="noopener">Telegram</a>
+</div></header>
+<div id="ab"></div>
+<main class="w" id="app"></main>
+<footer><div class="w" id="ft"></div></footer>
+<script id="db" type="application/json">{"site": {"b1": "HLTV", "b2": "TIR 6", "h1a": "Рейтинг команд", "h1b": "CS2 Tier 6", "sub": "Актуальный топ-15 нижнего эшелона сцены. Очки, изменения позиций и составы.", "tg": "https://t.me/hltvtir6", "foot": "HLTV Tir 6 · неофициальный рейтинг команд CS2", "about": "Tier 6 — условное название самого нижнего уровня соревновательной сцены CS2: команды, которые только пробиваются наверх.\nОчки начисляются за результаты матчей и турниров. Изменение позиции показывает сдвиг относительно прошлого обновления.\nХочешь в рейтинг? Напиши в Telegram — добавим вашу команду.", "logo": "data:image/jpeg;base64,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", "ph": ""}, "teams": [{"n": "LeTx", "p": 332, "c": 0, "l": "", "pl": ["Fem4ik", "M1k3lkak", "Bobr", "KRAIT", "whyshii"]}, {"n": "Team Vanity", "p": 300, "c": 2, "l": "", "pl": ["rrubbi", "RAVEN", "Flintyyy", "Tehn1kkk", "OOOresh"]}, {"n": "Auren", "p": 210, "c": -1, "l": "", "pl": []}, {"n": "Team Muncia", "p": 145, "c": 18, "l": "", "pl": ["Swr1zY", "Shipinship", "Grottes", "Pr1nsee", "Starmix"]}, {"n": "SAS Esports", "p": 130, "c": 12, "l": "", "pl": ["Onlyyy_3", "marshmello", "broski", "muchaed", "ayansniper"]}, {"n": "Quantum Esports", "p": 78, "c": -3, "l": "", "pl": ["frostb1te", "tobiyache", "NEX", "kkora"]}, {"n": "Onesilleas", "p": 63, "c": -2, "l": "", "pl": ["K0beskin", "wassup", "neptune", "fAD", "skytlyen"]}, {"n": "RedLine team", "p": 41, "c": 22, "l": "", "pl": ["pr1nse", "k1ros", "spooky", "kismain", "verol"]}, {"n": "Zynq team", "p": 40, "c": -3, "l": "", "pl": ["w0nt", "V0nzi", "fender8", "kr1mZe"]}, {"n": "MoonShine", "p": 38, "c": 3, "l": "", "pl": ["kir_yasky", "Linken", "Kendo", "LyLb1K", "chuicing"]}, {"n": "BLG_Team", "p": 38, "c": -3, "l": "", "pl": ["solqr_", "kra0", "Vladmiko", "Almaxon", ".921"]}, {"n": "Cerbures esports", "p": 38, "c": -3, "l": "", "pl": ["xit3l", "MOKYO", "Clarko", "v3px", "Skylearsi"]}, {"n": "PhoRem", "p": 38, "c": -3, "l": "", "pl": ["artefactor", "lo1nger_141", "sinchetko", "Yar0n1x", "madara666"]}, {"n": "Astral Team", "p": 25, "c": 1, "l": "", "pl": ["hayzen", "dkelcx", "sayreesest???", "tw", "w1lan000"]}, {"n": "WL Team", "p": 25, "c": 0, "l": "", "pl": ["Kav1xz", "Hobost", "leg1ch", "paradise", "Ryota"]}], "stats": {}}</script>
+<script>
+function E(i){return document.getElementById(i)}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function h(s){var x=2166136261;for(var i=0;i<s.length;i++){x^=s.charCodeAt(i);x=Math.imul(x,16777619)}return(x>>>0).toString(36)}
+function H(s){s='t6:'+s;return h(s)+h(s+'~')+h(s.split('').reverse().join(''))}
+function rnd(s,a,b){return a+(parseInt(h(s),36)%1000)/1000*(b-a)}
+var DB=JSON.parse(E('db').textContent),ADM=false,AT='teams',T,P;
+try{ADM=sessionStorage.getItem('tir6adm')=='1';var dr=localStorage.getItem('tir6db');if(ADM&&dr)DB=JSON.parse(dr)}catch(e){}
+function save(){try{localStorage.setItem('tir6db',JSON.stringify(DB))}catch(e){}}
+function build(){T=DB.teams.map(function(t,i){return{i:i,n:t.n,p:t.p,c:t.c,l:t.l,pl:t.pl}});P=[];T.forEach(function(t){t.pl.forEach(function(n){P.push({n:n,t:t.i})})})}
+function site(){var s=DB.site;E('lg').src=s.logo;E('bn').innerHTML=esc(s.b1)+' <b>'+esc(s.b2)+'</b>';E('tgb').href=s.tg;
+E('ft').innerHTML='© '+esc(s.foot)+' · <a href="'+esc(s.tg)+'" target="_blank" rel="noopener" style="color:var(--ac)">'+esc(s.tg.replace('https://',''))+'</a>';
+E('ab').innerHTML=ADM?'<div class="abar"><div class="w">Режим админа · <a href="#/admin">Панель</a> · <a href="#/" onclick="out()">Выйти</a></div></div>':'';
+document.title=s.b1+' '+s.b2+' — '+s.h1a+' '+s.h1b}
+function demo(p){var k=p.n;return{r:rnd(k+"r",.88,1.28),kd:rnd(k+"k",.85,1.4),hs:rnd(k+"h",32,66),ka:rnd(k+"a",62,79),adr:rnd(k+"d",58,88),m:Math.round(rnd(k+"m",18,64))}}
+function stats(p){var o=DB.stats[p.n]||{},d=demo(p),s={real:false};["r","kd","hs","ka","adr","m"].forEach(function(k){if(o[k]!==undefined&&o[k]!==""&&!isNaN(+o[k])){s[k]=+o[k];s.real=true}else s[k]=d[k]});return s}
+function chg(c){return c>0?'<span class="ch up">▲ '+c+'</span>':c<0?'<span class="ch dn">▼ '+(-c)+'</span>':'<span class="ch eq">—</span>'}
+function ini(n){return esc(n.replace(/[^A-Za-zА-Яа-я0-9]/g,"").slice(0,2).toUpperCase())}
+function bd(t,big){return'<span class="badge'+(big?' bg':'')+'">'+(t.l?'<img class="bi" src="'+esc(t.l)+'" alt="">':ini(t.n))+'</span>'}
+function trow(t){return'<a class="row" href="#/team/'+t.i+'"><span class="pos">#'+(t.i+1)+'</span>'+bd(t)+'<span class="nm">'+esc(t.n)+'<span class="pl">'+esc(t.pl.join(" · ")||"состав уточняется")+'</span></span><span class="pts">'+t.p+'</span>'+chg(t.c)+'</a>'}
+function prow(p){var s=stats(p);return'<a class="row" href="#/player/'+encodeURIComponent(p.n)+'"><span class="badge">'+ini(p.n)+'</span><span class="nm">'+esc(p.n)+'<span class="pl">'+esc(T[p.t].n)+'</span></span><span class="pts">'+s.r.toFixed(2)+'</span></a>'}
+function cta(t,b){return'<div class="cta"><div><b style="font-size:18px">'+t+'</b></div><a href="'+esc(DB.site.tg)+'" target="_blank" rel="noopener">'+b+'</a></div>'}
+var V={
+home:function(){var s=DB.site,t3=T.slice(0,3).map(function(t,i){return'<a class="card'+(i?'':' c1')+'" href="#/team/'+t.i+'" style="display:block"><div class="pos">#'+(i+1)+'</div><div class="big">'+t.p+'</div><b>'+esc(t.n)+'</b><span class="pl">'+esc(t.pl.join(" · ")||"состав уточняется")+'</span></a>'}).join("");
+return'<section class="hero"><h1>'+esc(s.h1a)+' <span>'+esc(s.h1b)+'</span></h1><p class="sub">'+esc(s.sub)+'</p></section><div class="top3">'+t3+'</div><h2>Полный рейтинг</h2>'+T.map(trow).join("")+cta("Новости и результаты — в Telegram","Подписаться")},
+teams:function(){return'<h2>Команды</h2><input id="q" placeholder="Поиск команды..."><div id="l">'+T.map(trow).join("")+'</div>'},
+players:function(){return'<h2>Игроки</h2><input id="q" placeholder="Поиск игрока или команды..."><div id="l">'+P.map(prow).join("")+'</div>'},
+team:function(a){var t=T[a];if(!t)return V.nf();var pr=P.filter(function(p){return p.t==t.i}),tr=pr.reduce(function(s,p){return s+stats(p).r},0)/(pr.length||1);
+return'<a class="back" href="#/teams">← Все команды</a><section class="hero" style="padding-top:8px"><div style="display:flex;gap:14px;align-items:center">'+bd(t,1)+'<div><h1 style="margin:0">'+esc(t.n)+'</h1><span class="sub">Место в рейтинге: #'+(t.i+1)+'</span></div></div></section><div class="st"><div><small>Очки</small><b>'+t.p+'</b></div><div><small>Позиция</small><b>#'+(t.i+1)+'</b></div><div><small>Изменение</small><b class="'+(t.c>0?'up':t.c<0?'dn':'eq')+'">'+(t.c>0?'+':'')+t.c+'</b></div><div><small>Ср. рейтинг</small><b>'+tr.toFixed(2)+'</b></div></div><h2>Состав</h2>'+(pr.map(prow).join("")||'<div class="note">Состав пока не указан.</div>')},
+player:function(a){var n=decodeURIComponent(a),p=P.filter(function(x){return x.n==n})[0];if(!p)return V.nf();var s=stats(p),t=T[p.t];
+function bar(l,v,mx,f){return'<div style="display:flex;justify-content:space-between"><span>'+l+'</span><b>'+f+'</b></div><div class="bar"><i style="width:'+Math.min(100,v/mx*100)+'%"></i></div>'}
+return'<a class="back" href="#/team/'+t.i+'">← '+esc(t.n)+'</a><section class="hero" style="padding-top:8px"><div style="display:flex;gap:14px;align-items:center"><span class="badge bg">'+ini(p.n)+'</span><div><h1 style="margin:0">'+esc(p.n)+'</h1><span class="sub">Команда: <a href="#/team/'+t.i+'" style="color:var(--ac)">'+esc(t.n)+'</a></span></div></div></section><div class="st"><div><small>Rating 2.0</small><b>'+s.r.toFixed(2)+'</b></div><div><small>K/D</small><b>'+s.kd.toFixed(2)+'</b></div><div><small>HS%</small><b>'+s.hs.toFixed(0)+'%</b></div><div><small>Карт</small><b>'+s.m+'</b></div></div><div class="card">'+bar("KAST",s.ka,100,s.ka.toFixed(1)+"%")+bar("ADR",s.adr,110,s.adr.toFixed(1))+bar("Headshots",s.hs,100,s.hs.toFixed(0)+"%")+'</div>'+(s.real?'':'<div class="note">Статистика игрока — демо-значения. Реальные данные ещё не добавлены.</div>')},
+about:function(){return'<h2>О рейтинге</h2><div class="card">'+DB.site.about.split("\n").filter(function(x){return x.trim()}).map(function(x){return'<p>'+esc(x)+'</p>'}).join("")+'</div>'+cta("Канал в Telegram","Открыть")},
+nf:function(){return'<h2>Страница не найдена</h2><a class="back" href="#/">На главную</a>'},
+admin:function(){if(!ADM)return'<h2>Вход</h2><div class="card"><input id="pw" type="password" placeholder="Пароль" onkeydown="if(event.key==\'Enter\')login()"><button class="p" onclick="login()">Войти</button></div>';
+return'<h2>Админ-панель</h2><div class="tabs">'+[["teams","Команды"],["stats","Статистика"],["site","Сайт"],["exp","Экспорт"]].map(function(x){return'<button class="'+(AT==x[0]?'on':'')+'" onclick="AT=\''+x[0]+'\';R()">'+x[1]+'</button>'}).join("")+'<a class="btn" href="#/">Открыть сайт</a></div>'+AV[AT]()}};
+var AV={
+teams:function(){return'<div class="ar"><button class="p" onclick="addT()">+ Команда</button><button onclick="srt()">Сортировать по очкам</button></div>'+DB.teams.map(function(t,i){var d=' data-sc="t" data-i="'+i+'" ';return'<div class="card" style="margin-bottom:10px"><div class="ar"><b>#'+(i+1)+'</b><input'+d+'data-k="n" value="'+esc(t.n)+'" placeholder="Название"><input'+d+'data-k="p" type="number" value="'+t.p+'" style="max-width:90px" title="Очки"><input'+d+'data-k="c" type="number" value="'+t.c+'" style="max-width:80px" title="Изменение позиции"><button onclick="mv('+i+',-1)">↑</button><button onclick="mv('+i+',1)">↓</button><button class="x" onclick="del('+i+')">✕</button></div><div class="ar">'+(t.l?'<img class="bi" src="'+esc(t.l)+'" alt=""><button onclick="DB.teams['+i+'].l=\'\';save();R()">убрать лого</button>':'')+'<label class="btn">Загрузить лого<input type="file" accept="image/*" hidden onchange="img(this.files[0],function(u){DB.teams['+i+'].l=u;save();R()})"></label></div><textarea'+d+'data-k="pl" rows="5" placeholder="Ники игроков, по одному в строке">'+esc(t.pl.join("\n"))+'</textarea></div>'}).join("")},
+stats:function(){build();return'<div class="note" style="margin:0 0 14px">Оставь поле пустым — будет демо-значение (показано в подсказке). Заполненные поля становятся реальными данными.</div>'+P.map(function(p){var d=demo(p),o=DB.stats[p.n]||{};return'<div class="ar"><b style="min-width:120px">'+esc(p.n)+'<span class="pl">'+esc(T[p.t].n)+'</span></b>'+[["r","Rating",2],["kd","K/D",2],["hs","HS%",0],["ka","KAST",1],["adr","ADR",1],["m","Карт",0]].map(function(f){var v=d[f[0]];return'<input data-sc="s" data-n="'+esc(p.n)+'" data-k="'+f[0]+'" placeholder="'+f[1]+' '+v.toFixed(f[2])+'" value="'+esc(o[f[0]]===undefined?"":o[f[0]])+'" style="max-width:100px">'}).join("")+'</div>'}).join("")},
+site:function(){var s=DB.site;function f(l,k,ta){var d=' data-sc="site" data-k="'+k+'"';return'<label><small>'+l+'</small>'+(ta?'<textarea rows="7"'+d+'>'+esc(s[k])+'</textarea>':'<input'+d+' value="'+esc(s[k])+'">')+'</label>'}
+return'<div class="card">'+f("Название (белая часть)","b1")+f("Название (синяя часть)","b2")+f("Заголовок главной (белая часть)","h1a")+f("Заголовок главной (синяя часть)","h1b")+f("Подзаголовок","sub")+f("Ссылка на Telegram","tg")+f("Подпись в футере","foot")+f("Текст «О рейтинге» (каждая строка — абзац)","about",1)+'<div class="ar"><img class="bi" src="'+esc(s.logo)+'" alt=""><label class="btn">Сменить логотип<input type="file" accept="image/*" hidden onchange="img(this.files[0],function(u){DB.site.logo=u;save();R()})"></label></div><h2>Пароль админки</h2><div class="ar"><input id="np" type="password" placeholder="Новый пароль"><button class="p" onclick="if(E(\'np\').value.length>3){DB.site.ph=H(E(\'np\').value);save();alert(\'Пароль изменён\')}else alert(\'Минимум 4 символа\')">Сменить</button></div></div>'},
+exp:function(){return'<div class="card"><p>Изменения сохраняются как черновик в этом браузере. Чтобы их увидели посетители — скачай готовый сайт и залей на хостинг.</p><div class="ar"><button class="p" onclick="exh()">⬇ Скачать index.html</button><button onclick="dl(\'data.json\',J(),\'application/json\')">Скачать data.json</button><label class="btn">Импорт data.json<input type="file" accept=".json" hidden onchange="imp(this.files[0])"></label><button class="x" onclick="if(confirm(\'Сбросить черновик?\')){localStorage.removeItem(\'tir6db\');location.reload()}">Сбросить черновик</button></div></div>'}};
+function R(){var y=scrollY;go();scrollTo(0,y)}
+function login(){if(H(E("pw").value)==(DB.site.ph||H("admin"))){ADM=true;try{sessionStorage.setItem("tir6adm","1");var d=localStorage.getItem("tir6db");if(d)DB=JSON.parse(d)}catch(e){}R()}else alert("Неверный пароль")}
+function out(){ADM=false;try{sessionStorage.removeItem("tir6adm")}catch(e){}setTimeout(function(){location.reload()},50)}
+function addT(){DB.teams.push({n:"Новая команда",p:0,c:0,l:"",pl:[]});save();R()}
+function srt(){DB.teams.sort(function(a,b){return b.p-a.p});save();R()}
+function mv(i,d){var j=i+d,a=DB.teams;if(j<0||j>=a.length)return;var t=a[i];a[i]=a[j];a[j]=t;save();R()}
+function del(i){if(confirm("Удалить команду?")){DB.teams.splice(i,1);save();R()}}
+function img(f,cb){if(!f)return;var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var c=document.createElement("canvas");c.width=c.height=128;var k=128/Math.max(im.width,im.height),w=im.width*k,hh=im.height*k;c.getContext("2d").drawImage(im,(128-w)/2,(128-hh)/2,w,hh);cb(c.toDataURL("image/png"))};im.src=r.result};r.readAsDataURL(f)}
+function dl(n,t,m){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:m}));a.download=n;a.click()}
+function J(){return JSON.stringify(DB).replace(/</g,"\\u003c")}
+function exh(){var c=document.documentElement.cloneNode(true);c.querySelector("#db").textContent=J();c.querySelector("#app").innerHTML="";c.querySelector("#ab").innerHTML="";dl("index.html","<!DOCTYPE html>\n"+c.outerHTML,"text/html")}
+function imp(f){if(!f)return;var r=new FileReader();r.onload=function(){try{DB=JSON.parse(r.result);save();R()}catch(e){alert("Неверный файл")}};r.readAsText(f)}
+E("app").addEventListener("input",function(e){var t=e.target,k=t.dataset.k,sc=t.dataset.sc;if(!k)return;
+if(sc=="t"){DB.teams[+t.dataset.i][k]=k=="n"?t.value:k=="pl"?t.value.split("\n").map(function(x){return x.trim()}).filter(Boolean):+t.value||0}
+else if(sc=="s"){var n=t.dataset.n;DB.stats[n]=DB.stats[n]||{};DB.stats[n][k]=t.value}
+else if(sc=="site"){DB.site[k]=t.value}
+save()});
+function go(){build();site();var r=(/admin/i.test(location.hash)?"admin":location.hash.replace(/^#\/?/,"")).split("/"),k=r[0]||"home",a=r.slice(1).join("/");
+if(!V[k]||k=="nf")k="nf";E("app").innerHTML=V[k](a);window.scrollTo(0,0);
+[].forEach.call(document.querySelectorAll("#nav a"),function(x){var d=x.getAttribute("data-r");x.className=(d==r[0]||(d==""&&!r[0])||(d=="teams"&&r[0]=="team")||(d=="players"&&r[0]=="player"))?"on":""});
+var q=E("q");if(q)q.oninput=function(){var v=q.value.toLowerCase();E("l").innerHTML=(k=="teams"?T.filter(function(t){return(t.n+" "+t.pl.join(" ")).toLowerCase().indexOf(v)>-1}).map(trow):P.filter(function(p){return(p.n+" "+T[p.t].n).toLowerCase().indexOf(v)>-1}).map(prow)).join("")}}
+var lc=0,lt;E("lg").addEventListener("click",function(e){lc++;clearTimeout(lt);lt=setTimeout(function(){lc=0},1500);if(lc>=5){lc=0;e.preventDefault();location.hash="#/admin"}});
+document.addEventListener("keydown",function(e){if(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()=="a")location.hash="#/admin"});
+if(/[?&]admin/.test(location.search))location.hash="#/admin";
+window.onhashchange=go;go();
+</script></body></html>
