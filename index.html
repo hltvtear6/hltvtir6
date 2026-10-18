@@ -75,8 +75,9 @@ function h(s){var x=2166136261;for(var i=0;i<s.length;i++){x^=s.charCodeAt(i);x=
 function H(s){s='t6:'+s;return h(s)+h(s+'~')+h(s.split('').reverse().join(''))}
 function rnd(s,a,b){return a+(parseInt(h(s),36)%1000)/1000*(b-a)}
 var DB=JSON.parse(E('db').textContent),ADM=false,AT='teams',T,P;
-try{ADM=sessionStorage.getItem('tir6adm')=='1';var dr=localStorage.getItem('tir6db');if(ADM&&dr)DB=JSON.parse(dr)}catch(e){}
-function save(){try{localStorage.setItem('tir6db',JSON.stringify(DB))}catch(e){}}
+var BH=h(E('db').textContent);function ld(){try{var o=JSON.parse(localStorage.getItem('tir6db'));if(o&&o.b==BH&&o.d)return o.d}catch(e){}return null}
+try{ADM=sessionStorage.getItem('tir6adm')=='1';var dr=ld();if(ADM&&dr)DB=dr}catch(e){}
+function save(){try{localStorage.setItem('tir6db',JSON.stringify({b:BH,d:DB}))}catch(e){}}
 function build(){T=DB.teams.map(function(t,i){return{i:i,n:t.n,p:t.p,c:t.c,l:t.l,pl:t.pl}});P=[];T.forEach(function(t){t.pl.forEach(function(n){P.push({n:n,t:t.i})})})}
 function site(){var s=DB.site;E('lg').src=s.logo;E('bn').innerHTML=esc(s.b1)+' <b>'+esc(s.b2)+'</b>';E('tgb').href=s.tg;
 E('ft').innerHTML='© '+esc(s.foot)+' · <a href="'+esc(s.tg)+'" target="_blank" rel="noopener" style="color:var(--ac)">'+esc(s.tg.replace('https://',''))+'</a>';
@@ -112,7 +113,7 @@ site:function(){var s=DB.site;function f(l,k,ta){var d=' data-sc="site" data-k="
 return'<div class="card">'+f("Название (белая часть)","b1")+f("Название (синяя часть)","b2")+f("Заголовок главной (белая часть)","h1a")+f("Заголовок главной (синяя часть)","h1b")+f("Подзаголовок","sub")+f("Ссылка на Telegram","tg")+f("Подпись в футере","foot")+f("Текст «О рейтинге» (каждая строка — абзац)","about",1)+'<div class="ar"><img class="bi" src="'+esc(s.logo)+'" alt=""><label class="btn">Сменить логотип<input type="file" accept="image/*" hidden onchange="img(this.files[0],function(u){DB.site.logo=u;save();R()})"></label></div><h2>Пароль админки</h2><div class="ar"><input id="np" type="password" placeholder="Новый пароль"><button class="p" onclick="if(E(\'np\').value.length>3){DB.site.ph=H(E(\'np\').value);save();alert(\'Пароль изменён\')}else alert(\'Минимум 4 символа\')">Сменить</button></div></div>'},
 exp:function(){return'<div class="card"><p>Изменения сохраняются как черновик в этом браузере. Чтобы их увидели посетители — скачай готовый сайт и залей на хостинг.</p><div class="ar"><button class="p" onclick="exh()">⬇ Скачать index.html</button><button onclick="dl(\'data.json\',J(),\'application/json\')">Скачать data.json</button><label class="btn">Импорт data.json<input type="file" accept=".json" hidden onchange="imp(this.files[0])"></label><button class="x" onclick="if(confirm(\'Сбросить черновик?\')){localStorage.removeItem(\'tir6db\');location.reload()}">Сбросить черновик</button></div></div>'}};
 function R(){var y=scrollY;go();scrollTo(0,y)}
-function login(){if(H(E("pw").value)==(DB.site.ph||H("admin"))){ADM=true;try{sessionStorage.setItem("tir6adm","1");var d=localStorage.getItem("tir6db");if(d)DB=JSON.parse(d)}catch(e){}R()}else alert("Неверный пароль")}
+function login(){if(H(E("pw").value)==(DB.site.ph||H("admin"))){ADM=true;try{sessionStorage.setItem("tir6adm","1");var d=ld();if(d)DB=d}catch(e){}R()}else alert("Неверный пароль")}
 function out(){ADM=false;try{sessionStorage.removeItem("tir6adm")}catch(e){}setTimeout(function(){location.reload()},50)}
 function addT(){DB.teams.push({n:"Новая команда",p:0,c:0,l:"",pl:[]});save();R()}
 function srt(){DB.teams.sort(function(a,b){return b.p-a.p});save();R()}
